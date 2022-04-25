@@ -4,7 +4,8 @@ import ie.tudublin.*;
 
 public class JohnMain extends Visual
 {
-    //WaveForm wf;
+    int mode;
+    WaveForm wf;
     //AudioBandsVisual abv;
 
     public void settings()
@@ -29,8 +30,7 @@ public class JohnMain extends Visual
         // Call this instead to read audio from the microphone
         //startListening(); 
         
-        //wf = new WaveForm(this);
-        //abv = new AudioBandsVisual(this);
+        wf = new WaveForm(this);
     }
 
     public void keyPressed()
@@ -39,6 +39,11 @@ public class JohnMain extends Visual
         {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
+        }
+
+        if(key >='0' && key <='4')
+        {
+            mode = key-'0';
         }
     }
 
@@ -59,7 +64,18 @@ public class JohnMain extends Visual
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        //wf.render();
-        //abv.render();
+        
+        switch(mode)
+        {
+            case 1:
+            {
+                wf.render();
+                break;
+            }
+            case 2:
+            {
+                break;
+            }
+        }
     }
 }

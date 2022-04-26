@@ -2,6 +2,7 @@ package ie.tudublin;
 
 import C20401442.JohnMain;
 import example.CubeVisual;
+import example.CubeVisual1;
 import example.MyVisual;
 import example.RotatingAudioBands;
 

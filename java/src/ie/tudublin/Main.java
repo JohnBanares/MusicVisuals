@@ -19,7 +19,7 @@ public class Main
 	public void startUI()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new CubeVisual());		
+        processing.core.PApplet.runSketch( a, new JohnMain());		
 	}
 
 	public static void main(String[] args)

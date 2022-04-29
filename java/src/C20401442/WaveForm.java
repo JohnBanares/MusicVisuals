@@ -17,6 +17,16 @@ public class WaveForm
     public void render()
     {
         jm.colorMode(PApplet.HSB);
+        /*for(int i = 0 ; i < 50 + (200 * jm.getSmoothedAmplitude());i ++)
+        {
+            jm.stroke(
+                PApplet.map(i, 0, 50 + (200 * jm.getSmoothedAmplitude()), 0, 255)
+                , 255
+                , 255
+            );
+
+            jm.line(450+i, cy, 450+i, cy + cy * jm.getAudioBuffer().get(i));
+        }*/
         for(int i = 0 ; i < jm.getAudioBuffer().size() ; i ++)
         {
             jm.stroke(

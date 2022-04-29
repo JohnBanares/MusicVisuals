@@ -6,11 +6,12 @@ public class JohnMain extends Visual
 {
     int mode;
     WaveForm wf;
+    CubeVisual1 cv;
     //AudioBandsVisual abv;
 
     public void settings()
     {
-        size(1024, 500);
+        size(1024, 500, P3D);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -31,6 +32,7 @@ public class JohnMain extends Visual
         //startListening(); 
         
         wf = new WaveForm(this);
+        cv = new CubeVisual1(this);
     }
 
     public void keyPressed()
@@ -70,10 +72,17 @@ public class JohnMain extends Visual
             case 1:
             {
                 wf.render();
+                cv.render();
                 break;
             }
             case 2:
             {
+                wf.render();
+                break;
+            }
+            case 3:
+            {
+                cv.render();
                 break;
             }
         }

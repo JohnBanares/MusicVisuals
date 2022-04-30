@@ -51,7 +51,7 @@ public class CubeVisual1
 
         //bottom left cube
         cv.pushMatrix();
-        cv.translate(150, 0, -200);
+        cv.translate(150, 500, -200);
         cv.rotateX(angle+90f);
         cv.rotateZ(angle+90f);       
         cv.box(boxSize);   
@@ -59,7 +59,7 @@ public class CubeVisual1
 
         //bottom right cube
         cv.pushMatrix();
-        cv.translate(850, 0, -200);
+        cv.translate(850, 500, -200);
         cv.rotateX(angle);
         cv.rotateZ(angle);       
         cv.box(boxSize);   

@@ -11,7 +11,7 @@ public class JohnMain extends Visual
 
     public void settings()
     {
-        size(1024, 500, P3D);
+        size(1024, 600, P3D);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -67,6 +67,14 @@ public class JohnMain extends Visual
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
         
+        float average = 0;
+        float sum = 0;
+        float smoothedAmplitude = 0;
+        average= sum / (float) getAudioBuffer().size();
+        smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
+        
+        float cx = width / 2;
+        float cy = height / 2;
         switch(mode)
         {
             case 1:
@@ -82,7 +90,6 @@ public class JohnMain extends Visual
             }
             case 3:
             {
-                cv.render();
                 break;
             }
         }

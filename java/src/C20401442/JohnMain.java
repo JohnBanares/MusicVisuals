@@ -25,7 +25,7 @@ public class JohnMain extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("00. Feel.mp3");   
+        loadAudio("heroplanet.mp3");   
 
         
         // Call this instead to read audio from the microphone

@@ -1,15 +1,14 @@
 package C20401442;
 
-import processing.core.*;
+import processing.core.PApplet;
 
-public class test4 {
-
+public class Sqaures {
     JohnMain cv;
     float angle = 0;
     float smoothedBoxSize = 0;
     float h;
     float w;
-    public test4(JohnMain cv)
+    public Sqaures(JohnMain cv)
     {
         this.cv = cv;
         h = this.cv.height;

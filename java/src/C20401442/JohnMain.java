@@ -8,6 +8,7 @@ public class JohnMain extends Visual
     WaveForm wf;
     CubeVisual1 cv;
     test3 tm;
+    Sqaures sq;
     //AudioBandsVisual abv;
 
     public void settings()
@@ -35,6 +36,7 @@ public class JohnMain extends Visual
         wf = new WaveForm(this);
         cv = new CubeVisual1(this);
         tm = new test3(this);
+        sq = new Sqaures(this);
     }
 
     public void keyPressed()
@@ -78,7 +80,7 @@ public class JohnMain extends Visual
             }
             case 2:
             {
-                wf.render();
+                sq.render();
                 break;
             }
             case 3:

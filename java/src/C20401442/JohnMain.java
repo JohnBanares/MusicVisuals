@@ -7,6 +7,7 @@ public class JohnMain extends Visual
     int mode;
     WaveForm wf;
     CubeVisual1 cv;
+    test3 tm;
     //AudioBandsVisual abv;
 
     public void settings()
@@ -17,7 +18,7 @@ public class JohnMain extends Visual
         //fullScreen();
 
         // Use this to make fullscreen and use P3D for 3D graphics
-        //fullScreen(P3D, SPAN); 
+        //fullScreen(P3D,SPAN); 
     }
 
     public void setup()
@@ -25,7 +26,7 @@ public class JohnMain extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("heroplanet.mp3");   
+        loadAudio("00. Feel.mp3");   
 
         
         // Call this instead to read audio from the microphone
@@ -33,6 +34,7 @@ public class JohnMain extends Visual
         
         wf = new WaveForm(this);
         cv = new CubeVisual1(this);
+        tm = new test3(this);
     }
 
     public void keyPressed()
@@ -66,15 +68,6 @@ public class JohnMain extends Visual
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        
-        float average = 0;
-        float sum = 0;
-        float smoothedAmplitude = 0;
-        average= sum / (float) getAudioBuffer().size();
-        smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
-        
-        float cx = width / 2;
-        float cy = height / 2;
         switch(mode)
         {
             case 1:
@@ -89,6 +82,11 @@ public class JohnMain extends Visual
                 break;
             }
             case 3:
+            {
+                tm.render();
+                break;
+            }
+            case 4:
             {
                 break;
             }

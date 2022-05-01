@@ -5,14 +5,14 @@ import processing.core.*;
 // This is an example of a visual that renders the waveform
 public class WaveForm
 {
-    JohnMain jm;
+    JohnMain cv;
     //temp tm;
-    float cy = 0;
+    //float cy = 0;
 
-    public WaveForm(JohnMain jm)
+    public WaveForm(JohnMain cv)
     {
-        this.jm = jm;
-        cy = this.jm.height / 2;
+        this.cv = cv;
+        //cy = this.cv.height / 2;
     }
     /*
     public WaveForm(temp tm)
@@ -23,7 +23,7 @@ public class WaveForm
 
     public void render()
     {
-        jm.colorMode(PApplet.HSB);
+        cv.colorMode(PApplet.HSB);
         /*
         for(int i = 0 ; i < 50 + (200 * jm.getSmoothedAmplitude());i ++)
         {
@@ -48,30 +48,30 @@ public class WaveForm
         }*/
         
         //side waveforms
-        for(int i = 0 ; i < jm.height ; i ++)
+        for(int i = 0 ; i < cv.height ; i ++)
         {
-            jm.stroke(
-                PApplet.map(i, 0, jm.height, 0, 255)
+            cv.stroke(
+                PApplet.map(i, 0, cv.height, 0, 255)
                 , 255
                 , 255
             );
 
-            jm.line(0, i,100 * jm.getAudioBuffer().get(i), i);
-            jm.line(jm.width, i,jm.width-100 * jm.getAudioBuffer().get(i), i);
-            jm.line(i, 0,i, 100 * jm.getAudioBuffer().get(i));
+            cv.line(0, i,100 * cv.getAudioBuffer().get(i), i);
+            cv.line(cv.width, i,cv.width-100 * cv.getAudioBuffer().get(i), i);
+            cv.line(i, 0,i, 100 * cv.getAudioBuffer().get(i));
         }
 
         //top and bottom waveforms
-        for(int i = 0 ; i < jm.width ; i ++)
+        for(int i = 0 ; i < cv.width ; i ++)
         {
-            jm.stroke(
-                PApplet.map(i, 0, jm.height, 0, 255)
+            cv.stroke(
+                PApplet.map(i, 0, cv.height, 0, 255)
                 , 255
                 , 255
             );
 
-            jm.line(i, 0,i, 100 * jm.getAudioBuffer().get(i));
-            jm.line(i, jm.height,i,jm.height- 100 * jm.getAudioBuffer().get(i));
+            cv.line(i, 0,i, 100 * cv.getAudioBuffer().get(i));
+            cv.line(i, cv.height,i,cv.height- 100 * cv.getAudioBuffer().get(i));
         }
 
     }

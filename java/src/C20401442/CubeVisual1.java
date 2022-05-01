@@ -6,13 +6,13 @@ public class CubeVisual1
 {
    
     JohnMain cv;
+    float angle = 0;
+    //float smoothedBoxSize = 0;
 
     public CubeVisual1(JohnMain cv)
     {
         this.cv = cv;
     }
-    float angle = 0;
-    float smoothedBoxSize = 0;
     
     public void render()
     {

@@ -18,11 +18,12 @@ public class Planet {
 
     public void render()
     {
-        jm.calculateAverageAmplitude();
         jm.background(0);
         jm.noFill();
         jm.lights();
         jm.stroke(PApplet.map(jm.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+
+        //center sphere
         jm.translate(w/2, h/2, -200);
 
         float boxSize = 50 + (jm.getAmplitude() * 200);//map(average, 0, 1, 100, 400); 
@@ -34,7 +35,8 @@ public class Planet {
         jm.sphere(smoothedBoxSize/ 4);            
         jm.strokeWeight(5);
         
-        //cv.box(smoothedBoxSize);
+        
+        //center ellipse and change color
         jm.ellipseMode(PApplet.CENTER);
         for(int i = 1; i <= 4; i ++)
         {

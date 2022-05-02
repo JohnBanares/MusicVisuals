@@ -10,18 +10,12 @@ public class JohnMain extends Visual
     Planet p;
     Sqaures sq;
     Pyramid pr;
-    LoopingCircle[] loop_star = new LoopingCircle[100];
-    //AudioBandsVisual abv;
+    LoopingCircle[] loop_circle = new LoopingCircle[100];
+    Intro in;
 
     public void settings()
     {
-        size(1024, 700, P3D);
-        
-        // Use this to make fullscreen
-        //fullScreen();
-
-        // Use this to make fullscreen and use P3D for 3D graphics
-        //fullScreen(P3D,SPAN); 
+        size(1024, 700, P3D); 
     }
 
     public void setup()
@@ -31,21 +25,18 @@ public class JohnMain extends Visual
         // Call loadAudio to load an audio file to process 
         loadAudio("00. Feel.mp3");   
 
-        
-        // Call this instead to read audio from the microphone
-        //startListening(); 
-        
         wf = new WaveForm(this);
         cv = new CubeVisual1(this);
         p = new Planet(this);
         sq = new Sqaures(this);
         pr = new Pyramid(this);
 
-        for(int i = 0; i< loop_star.length;i++)
+        for(int i = 0; i< loop_circle.length;i++)
         {
-            loop_star[i] = new LoopingCircle(this);
+            loop_circle[i] = new LoopingCircle(this);
         }
 
+        in = new Intro(this);
     }
 
     public void keyPressed()
@@ -83,35 +74,44 @@ public class JohnMain extends Visual
         {
             case 1:
             {
+                //waveform and cubes
                 wf.render();
                 cv.render();
                 break;
             }
             case 2:
             {
-                wf.render();
-                sq.render();
+                //planet
+                p.render();
                 break;
             }
             case 3:
             {
-                p.render();
+                //squares
+                sq.render();
                 break;
             }
             case 4:
             {
+                //pyramid
                 pr.render();
                 break;
             }
             case 5:
             {
+                //make circle start from the center of the screen
                 translate(width/2, height/2);
-                for(int i = 0; i< loop_star.length;i++)
+                //render and update 100 circles
+                for(int i = 0; i< loop_circle.length;i++)
                 {
-                    loop_star[i].update();
-                    loop_star[i].render();
+                    loop_circle[i].update();
+                    loop_circle[i].render();
                 }
                 break;
+            }
+            default:
+            {
+                in.render();
             }
         }
     }

@@ -39,7 +39,7 @@ public class LoopingCircle {
         float x1 = PApplet.map(x / z, 0, 1 , 0, w/2);
         float y1 = PApplet.map(y / z, 0, 1 , 0, h/2);   
         
-        float size = PApplet.map(z, 0, w/2, 16, 0);
+        float size = PApplet.map(z, 0, w/2, 25, 0);
         jm.ellipse(x1, y1, size, size);
 
     }

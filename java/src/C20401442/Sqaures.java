@@ -3,28 +3,26 @@ package C20401442;
 import processing.core.PApplet;
 
 public class Sqaures {
-    JohnMain cv;
+    JohnMain jm;
     float angle = 0;
     float smoothedBoxSize = 0;
     float h;
     float w;
-    public Sqaures(JohnMain cv)
+    public Sqaures(JohnMain jm)
     {
-        this.cv = cv;
-        h = this.cv.height;
-        w = this.cv.width;
+        this.jm = jm;
+        h = this.jm.height;
+        w = this.jm.width;
     }
 
     public void render()
     {
-        cv.stroke(PApplet.map(cv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        float boxSize = 100+ (300 * cv.getSmoothedAmplitude());
-        cv.rectMode(PApplet.CENTER);
-        for(int i = 1; i < 7;i++)
+        jm.stroke(PApplet.map(jm.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        float boxSize = 50+ (100 * jm.getSmoothedAmplitude());
+        jm.rectMode(PApplet.CENTER);
+        for(int i = 1; i < 13;i++)
         {
-            //cv.rect(w/2, h/2, boxSize, boxSize);
-            cv.rect(w/2, h/2, boxSize*i, boxSize*i);
-            
+            jm.rect(w/2, h/2, boxSize*i, boxSize*i); 
         }
     }
 }

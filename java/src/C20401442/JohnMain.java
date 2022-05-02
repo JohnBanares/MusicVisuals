@@ -7,9 +7,9 @@ public class JohnMain extends Visual
     int mode;
     WaveForm wf;
     CubeVisual1 cv;
-    test3 tm;
+    Planet p;
     Sqaures sq;
-    test5 tc;
+    Pyramid pr;
     LoopingCircle[] loop_star = new LoopingCircle[100];
     //AudioBandsVisual abv;
 
@@ -37,9 +37,9 @@ public class JohnMain extends Visual
         
         wf = new WaveForm(this);
         cv = new CubeVisual1(this);
-        tm = new test3(this);
+        p = new Planet(this);
         sq = new Sqaures(this);
-        tc = new test5(this);
+        pr = new Pyramid(this);
 
         for(int i = 0; i< loop_star.length;i++)
         {
@@ -89,17 +89,18 @@ public class JohnMain extends Visual
             }
             case 2:
             {
+                wf.render();
                 sq.render();
                 break;
             }
             case 3:
             {
-                tm.render();
+                p.render();
                 break;
             }
             case 4:
             {
-                tc.render();
+                pr.render();
                 break;
             }
             case 5:

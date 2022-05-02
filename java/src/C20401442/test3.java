@@ -27,19 +27,19 @@ public class test3 {
 
         float boxSize = 50 + (cv.getAmplitude() * 200);//map(average, 0, 1, 100, 400); 
         smoothedBoxSize = PApplet.lerp(smoothedBoxSize + 50, boxSize, 0.1f);  
-
-        cv.rotateY(angle);
-        cv.rotateX(angle);
+        
+        cv.rotateY(angle*2);
+        cv.rotateX(angle*2);
         //strokeWeight(1);
         cv.sphere(smoothedBoxSize/ 2);            
         cv.strokeWeight(5);
         
         //cv.box(smoothedBoxSize);
-        cv.ellipse(w/2, h/2, boxSize, boxSize);
-        cv.ellipse(w/2, h/2, boxSize*5, boxSize*5);
-        cv.ellipse(w/2, h/2, boxSize*10, boxSize*10);
-        cv.ellipse(w/2, h/2, boxSize*15, boxSize*15);
-        cv.ellipse(w/2, h/2, boxSize*20, boxSize*20);
+        cv.ellipseMode(PApplet.CENTER);
+        for(int i = 1; i <= 4; i ++)
+        {
+            cv.ellipse(0, 0, boxSize*(i*5), boxSize*(i*5));
+        }
         angle += 0.01f;
     }
 }

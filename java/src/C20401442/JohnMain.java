@@ -9,11 +9,13 @@ public class JohnMain extends Visual
     CubeVisual1 cv;
     test3 tm;
     Sqaures sq;
+    test5 tc;
+    LoopingCircle[] loop_star = new LoopingCircle[100];
     //AudioBandsVisual abv;
 
     public void settings()
     {
-        size(1024, 600, P3D);
+        size(1024, 700, P3D);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -37,6 +39,13 @@ public class JohnMain extends Visual
         cv = new CubeVisual1(this);
         tm = new test3(this);
         sq = new Sqaures(this);
+        tc = new test5(this);
+
+        for(int i = 0; i< loop_star.length;i++)
+        {
+            loop_star[i] = new LoopingCircle(this);
+        }
+
     }
 
     public void keyPressed()
@@ -47,7 +56,7 @@ public class JohnMain extends Visual
             getAudioPlayer().play();
         }
 
-        if(key >='0' && key <='4')
+        if(key >='0' && key <='5')
         {
             mode = key-'0';
         }
@@ -90,6 +99,17 @@ public class JohnMain extends Visual
             }
             case 4:
             {
+                tc.render();
+                break;
+            }
+            case 5:
+            {
+                translate(width/2, height/2);
+                for(int i = 0; i< loop_star.length;i++)
+                {
+                    loop_star[i].update();
+                    loop_star[i].render();
+                }
                 break;
             }
         }

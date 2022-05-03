@@ -19,6 +19,10 @@ Student Number: C20401442
 
 # What I am most proud of in the assignment
 
+Intro:
+
+![An image](images/intro.png)
+
 Visual 1:
 
 ![An image](images/img2.png)

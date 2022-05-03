@@ -22,16 +22,16 @@ Student Number: C20401442
 Visual 1:
 ![An image](images/img2.png)
 
-Visual 2
+Visual 2:
 ![An image](images/img3.png)
 
-Visual 3
+Visual 3:
 ![An image](images/img4.png)
 
-Visual 4
+Visual 4:
 ![An image](images/img5.png)
 
-Visual 5
+Visual 5:
 ![An image](images/img1.png)
 
 # Markdown Tutorial

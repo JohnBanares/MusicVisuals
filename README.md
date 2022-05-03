@@ -23,16 +23,16 @@ Visual 1:
 ![An image](images/img2.png)
 
 Visual 2
-![An image](images/p3.png)
+![An image](images/img3.png)
 
 Visual 3
-![An image](images/p4.png)
+![An image](images/img4.png)
 
 Visual 4
-![An image](images/p5.png)
+![An image](images/img5.png)
 
 Visual 5
-![An image](images/p1.png)
+![An image](images/img1.png)
 
 # Markdown Tutorial
 

@@ -20,6 +20,7 @@ Student Number: C20401442
 # What I am most proud of in the assignment
 
 Visual 1:
+
 ![An image](images/img2.png)
 
 Visual 2:

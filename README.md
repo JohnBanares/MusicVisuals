@@ -19,10 +19,19 @@ Student Number: C20401442
 
 # What I am most proud of in the assignment
 
+Visual 1:
 ![An image](images/img2.png)
+
+Visual 2
 ![An image](images/p3.png)
+
+Visual 3
 ![An image](images/p4.png)
+
+Visual 4
 ![An image](images/p5.png)
+
+Visual 5
 ![An image](images/p1.png)
 
 # Markdown Tutorial

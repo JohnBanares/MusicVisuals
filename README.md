@@ -24,6 +24,7 @@ Visual 1:
 ![An image](images/img2.png)
 
 Visual 2:
+
 ![An image](images/img3.png)
 
 Visual 3:

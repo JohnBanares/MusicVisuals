@@ -19,6 +19,12 @@ Student Number: C20401442
 
 # What I am most proud of in the assignment
 
+![An image](images/img2.png)
+![An image](images/p3.png)
+![An image](images/p4.png)
+![An image](images/p5.png)
+![An image](images/p1.png)
+
 # Markdown Tutorial
 
 This is *emphasis*

@@ -1,6 +1,6 @@
 # Music Visualiser Project
 
-Name:C20401442
+Name:John Matthew Banares
 
 Student Number: C20401442
 

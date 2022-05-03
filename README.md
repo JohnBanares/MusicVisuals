@@ -15,6 +15,16 @@ Student Number: C20401442
 
 # Instructions
 
+1. Run the code, intro screen will show with instructions
+2. Press space to start music
+3. Cycle through visuals using keys 1-5
+4. Visuals shown:
+	- 1 = Cubes with waveform
+	- 2 = Planet
+	- 3 = Squares
+	- 4 = Pyramid
+	- 5 = LoopingCircle
+
 # How it works
 
 # What I am most proud of in the assignment

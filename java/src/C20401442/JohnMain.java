@@ -6,7 +6,7 @@ public class JohnMain extends Visual
 {
     int mode;
     WaveForm wf;
-    CubeVisual1 cv;
+    Cubes cv;
     Planet p;
     Sqaures sq;
     Pyramid pr;
@@ -26,7 +26,7 @@ public class JohnMain extends Visual
         loadAudio("00. Feel.mp3");   
 
         wf = new WaveForm(this);
-        cv = new CubeVisual1(this);
+        cv = new Cubes(this);
         p = new Planet(this);
         sq = new Sqaures(this);
         pr = new Pyramid(this);

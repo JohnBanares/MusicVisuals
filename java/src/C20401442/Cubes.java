@@ -2,14 +2,14 @@ package C20401442;
 
 import processing.core.*;
 
-public class CubeVisual1 
+public class Cubes 
 {
    
     JohnMain jm;
     float angle = 0;
     //float smoothedBoxSize = 0;
 
-    public CubeVisual1(JohnMain jm)
+    public Cubes(JohnMain jm)
     {
         this.jm = jm;
     }

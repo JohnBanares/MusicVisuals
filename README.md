@@ -4,15 +4,8 @@ Name:John Matthew Banares
 
 Student Number: C20401442
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
-
 # Description of the assignment
-
+This assignment shows 6 different objects that react to the amplitude and frequency of music by changing sizes and colors.
 # Instructions
 
 1. Run the code, intro screen will show with instructions
@@ -27,27 +20,113 @@ Student Number: C20401442
 
 # How it works
 
+JohnMain extends Visual means that JohnMain is a subclass of Visual and has access to functions inside Visual functions such as getAudioBuffer, JohnMain inherits methods from Visual. Each visual is a class and created in JohnMain.
+
+```Java
+public class JohnMain extends Visual
+{
+    int mode;
+    WaveForm wf;
+    Cubes cv;
+    Planet p;
+    Sqaures sq;
+    Pyramid pr;
+    LoopingCircle[] loop_circle = new LoopingCircle[100];
+    Intro in;
+```
+Objects created in setup:
+
+```Java
+public void setup()
+{
+	startMinim();
+
+	// Call loadAudio to load an audio file to process 
+	loadAudio("00. Feel.mp3");   
+
+	wf = new WaveForm(this);
+	cv = new Cubes(this);
+	p = new Planet(this);
+	sq = new Sqaures(this);
+	pr = new Pyramid(this);
+
+	for(int i = 0; i< loop_circle.length;i++)
+	{
+	    loop_circle[i] = new LoopingCircle(this);
+	}
+
+	in = new Intro(this);
+}
+```
+Each visual has a render method which displays it to the user. To cycle through each visual a switch case is used.
+
+```Java
+ switch(mode)
+{
+    case 1:
+    {
+	//waveform and cubes
+	wf.render();
+	cv.render();
+	break;
+    }
+    case 2:
+    {
+	//planet
+	p.render();
+	break;
+    }
+    case 3:
+    {
+	//squares
+	sq.render();
+	break;
+    }
+    case 4:
+    {
+	//pyramid
+	pr.render();
+	break;
+    }
+    case 5:
+    {
+	//make circle start from the center of the screen
+	translate(width/2, height/2);
+	//render and update 100 circles
+	for(int i = 0; i< loop_circle.length;i++)
+	{
+	    loop_circle[i].update();
+	    loop_circle[i].render();
+	}
+	break;
+    }
+    default:
+    {
+	in.render();
+    }
+}
+```
 # What I am most proud of in the assignment
 
-Intro:
+Intro.java:
 
 ![An image](images/intro.png)
 
-Visual 1:
+Cubes.java and WaveForm.java:
 
 ![An image](images/img2.png)
 
-Visual 2:
+Planet.java:
 
 ![An image](images/img3.png)
 
-Visual 3:
+Sqaures.java:
 ![An image](images/img4.png)
 
-Visual 4:
+Pyramid.java:
 ![An image](images/img5.png)
 
-Visual 5:
+LoopingCircle.java:
 ![An image](images/img1.png)
 
 # Markdown Tutorial

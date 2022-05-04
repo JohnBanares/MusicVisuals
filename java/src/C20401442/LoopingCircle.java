@@ -23,7 +23,7 @@ public class LoopingCircle {
     //ipdate i
     void update()
     {
-        //higher the value of speed the faster z is out of the screen and respawing more ellipses
+        //higher the value of speed the faster z is out of the screen (the value of reaching 0 is faster) and respawing more ellipses
         z = z-speed;
         //reset the value of z to the width if z goes off screen (when it is 0) and respawn ellipse by giving new x and y values
         if(z < 1)
@@ -39,7 +39,9 @@ public class LoopingCircle {
         jm.noFill();
         jm.stroke(PApplet.map(jm.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
 
-        //x and y values for ellipses
+        //x and y values for ellipses as z is being updated (subtracting by 1)
+        // the value of x1 and y1 is is getting bigger and bigger as z (the divisor) getting smaller
+        //giving the illusion of zooming in
         float x1 = PApplet.map(x / z, 0, 1 , 0, w/2);
         float y1 = PApplet.map(y / z, 0, 1 , 0, h/2);   
         

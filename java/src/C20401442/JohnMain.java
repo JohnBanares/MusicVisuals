@@ -103,7 +103,7 @@ public class JohnMain extends Visual
             }
             case 5:
             {
-                //make circle start from the center of the screen
+                //make circle start from the center of the screen if commented out this is zooming in from the top left hand corner
                 translate(width/2, height/2);
                 //render and update 100 circles
                 for(int i = 0; i< loop_circle.length;i++)

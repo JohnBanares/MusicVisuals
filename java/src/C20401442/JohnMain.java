@@ -43,8 +43,12 @@ public class JohnMain extends Visual
     {
         if (key == ' ')
         {
-            getAudioPlayer().cue(0);
             getAudioPlayer().play();
+        }
+
+        if (key == 'r')
+        {
+            getAudioPlayer().cue(0);
         }
 
         if(key >='0' && key <='5')

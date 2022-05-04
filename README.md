@@ -58,7 +58,27 @@ public void setup()
 	in = new Intro(this);
 }
 ```
-Each visual has a render method which displays it to the user. To cycle through each visual a switch case is used.
+Keypressed checks user input. Space plays music, "r" replays music, keys 1-5 is assigned to mode variable for switch case
+```Java
+ public void keyPressed()
+{
+	if (key == ' ')
+	{
+	    getAudioPlayer().play();
+	}
+
+	if (key == 'r')
+	{
+	    getAudioPlayer().cue(0);
+	}
+
+	if(key >='0' && key <='5')
+	{
+	    mode = key-'0';
+	}
+}
+```
+Each visual has a render method which displays it to the user. To cycle through each visual a switch case is used. For the last visual looping circles i had to do some research and watch a youtube video as i wanted to make a visual of many circles getting smaller as they were moving closer to the edge of the screen to make it seem like you're zooming, I came across a youtube video that had a tutorial of a starfield which was exactly what i was looking for. The video was very informative and took a while to understand how it works. 
 
 ```Java
  switch(mode)
@@ -90,7 +110,7 @@ Each visual has a render method which displays it to the user. To cycle through 
     }
     case 5:
     {
-	//make circle start from the center of the screen
+        //make circle start from the center of the screen if commented out this is zooming in from the top left hand corner
 	translate(width/2, height/2);
 	//render and update 100 circles
 	for(int i = 0; i< loop_circle.length;i++)
@@ -107,6 +127,8 @@ Each visual has a render method which displays it to the user. To cycle through 
 }
 ```
 # What I am most proud of in the assignment
+
+Im most proud of the first visual i made the waveform with the cubes. At first i was not conifdent with java processing but after making the first visual working the rest of the visuals were easy to make with little problems.
 
 Intro.java:
 
